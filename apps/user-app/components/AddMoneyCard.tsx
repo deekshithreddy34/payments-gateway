@@ -8,8 +8,6 @@ import { createOnRampTransaction } from "../app/lib/actions/createOnRampTransact
 type BankProvider = "HDFC Bank" | "Axis Bank";
 
 
-
-
 const SUPPORTED_BANKS: {
   name: BankProvider;
   redirectUrl: string;
