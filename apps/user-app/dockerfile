@@ -1,0 +1,20 @@
+FROM node:20-alpine
+
+WORKDIR /app
+
+# copy only dependency files first (for caching)
+COPY package.json package-lock.json ./
+
+# install deps
+RUN npm install
+
+# now copy project
+COPY . .
+
+# build nextjs
+WORKDIR /app/apps/user-app
+RUN npm run build
+
+EXPOSE 3000
+
+CMD ["npm","run","start"]
