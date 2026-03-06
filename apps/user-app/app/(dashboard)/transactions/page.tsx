@@ -2,7 +2,17 @@ import { getServerSession } from "next-auth"
 import { authOptions } from "../../lib/auth";
 import prisma from "@repo/db/client";
 import { P2PTransactions } from "../../../components/p2pTransactions"; 
-
+type Transaction = {
+  timestamp: Date
+  amount: number
+  fromUserId: number
+  toUser: {
+    number: string
+  }
+  fromUser: {
+    number: string
+  }
+}
 async function getp2pTransactions(){
     const session=await getServerSession(authOptions);
     const userId=Number(session?.user?.id);
@@ -34,7 +44,7 @@ async function getp2pTransactions(){
         }
     }
     )
-        return txns.map(t=>{
+        return txns.map((t:Transaction)=>{
            
             const isSent=t.fromUserId === userId;
             return {
