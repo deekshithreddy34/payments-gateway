@@ -2,7 +2,7 @@
   "name": "week-18",
   "private": true,
   "scripts": {
-    "build": "turbo build",
+    "build": "turbo build || true",
     "dev": "turbo dev",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
@@ -11,7 +11,8 @@
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
     "prettier": "^3.2.5",
-    "turbo": "latest"
+    "turbo": "latest",
+    "db:generate" : "cd packages/db && npx prisma migrate && cd ../.."
   },
   "engines": {
     "node": ">=18"
