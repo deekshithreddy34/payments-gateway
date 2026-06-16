@@ -8,7 +8,7 @@ RUN npm install
 
 COPY . .
 
-RUN npx prisma generate --schema=packages/db/prisma/schema.prisma
+RUN ./node_modules/.bin/prisma generate --schema=packages/db/prisma/schema.prisma
 
 WORKDIR /app/apps/bank-webhook
 RUN npm run build
