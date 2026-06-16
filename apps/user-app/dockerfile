@@ -2,19 +2,12 @@ FROM node:20-alpine
 
 WORKDIR /app
 
-# copy only dependency files first (for caching)
-COPY package.json package-lock.json ./
-
-# install deps
-RUN npm install
-
-# now copy project
 COPY . .
 
-# generate prisma client
+RUN npm install
+
 RUN ./node_modules/.bin/prisma generate --schema=packages/db/prisma/schema.prisma
 
-# build nextjs
 WORKDIR /app/apps/user-app
 RUN npm run build
 
