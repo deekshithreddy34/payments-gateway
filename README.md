@@ -91,19 +91,23 @@ Running Locally
 
 Install dependencies:
 
+```
 npm install
+```
 
 Generate Prisma Client:
-
+```
 npm run db:generate
+```
 
 Run migrations:
-
+```
 npx prisma migrate dev
-
+```
 Start the application:
-
+```
 npm run dev
+```
 Docker
 
 The project can be run using Docker containers for the application services and PostgreSQL database.
@@ -123,3 +127,14 @@ Containerizing applications with Docker
 Disclaimer
 
 This is an educational project and is not intended to process real financial transactions.
+<img width="1347" height="636" alt="image" src="https://github.com/user-attachments/assets/b0762bc4-5a41-45ed-bf14-44533f1e4502" />
+
+<img width="1365" height="743" alt="image" src="https://github.com/user-attachments/assets/a66209bc-7a7a-4c21-b5f6-ad4275b63a2e" />
+
+<img width="1338" height="615" alt="image" src="https://github.com/user-attachments/assets/0b27ccf4-36d1-4058-811b-b03ca29661ef" />
+
+<img width="1325" height="546" alt="image" src="https://github.com/user-attachments/assets/f62ef63c-8a29-4350-b5db-801d0992caef" />
+
+
+
+
