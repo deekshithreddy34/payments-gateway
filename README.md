@@ -6,7 +6,7 @@ The project simulates core payment operations such as user wallets, balances, on
 
 ## Architecture
 
-```text
+```
                     Payments Gateway
                            │
               ┌────────────┴────────────┐
@@ -21,7 +21,7 @@ The project simulates core payment operations such as user wallets, balances, on
                            │
                            ▼
                        PostgreSQL
-
+```
 
 
 ## Tech Stack
