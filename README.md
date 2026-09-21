@@ -23,7 +23,8 @@ The project simulates core payment operations such as user wallets, balances, on
                        PostgreSQL
 
 
-Tech Stack
+
+## Tech Stack
 Frontend: Next.js, React, TypeScript
 Backend: Node.js, TypeScript
 Database: PostgreSQL
